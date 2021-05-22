@@ -3,11 +3,11 @@ Second Footer with Guessing number game in model
 
 
 Steps to install
-Please add this folder in app/code/
-run commands
-php bin/magento setup:upgrade
-php bin/magento setup:static-content:deploy 
-php bin/magento cache:flush
+1.Please add this folder in app/code/
+2. run commands
+3. php bin/magento setup:upgrade
+4. php bin/magento setup:static-content:deploy 
+5 .php bin/magento cache:flush
 
 and browse the magento page second footer will appear.
 
