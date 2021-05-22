@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Soni_SecondFooter::css/source/secondfooter.css"/>
+        <script src="Soni_SecondFooter::js/guessgame.js"/>
+    </head>
+    <body>
+        <referenceContainer name="footer-container">
+            <container name="second-footer" htmlTag="div" htmlClass="second-footer">
+                <block class="Magento\Framework\View\Element\Template" name="custom.footer"  before="-" template="Soni_SecondFooter::secondFooter.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

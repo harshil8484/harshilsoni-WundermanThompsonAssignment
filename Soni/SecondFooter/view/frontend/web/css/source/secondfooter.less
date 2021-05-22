@@ -1,0 +1,210 @@
+@modalcolor : #1FFF0F;
+.second-footer-content {
+	text-align: center;
+	padding: 30px;
+    background-color: #000;
+    position: relative;
+    height: 150px;
+    color: #fff;
+    h4{
+        font-size: 22px;
+        text-align: left;
+    }
+    button.play-game {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translateX(-50%) translateY(-50%);
+        background: #333;
+        color: #ccc;
+        width: 200px;
+        height: 60px;
+        border: 0;
+        font-size: 18px;
+        border-radius: 4px;
+        font-family: "Raleway", sans-serif;
+        transition: 0.6s;
+        overflow: hidden;
+        box-shadow: none;
+        
+        &:focus {
+            outline: 0;
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+            width: 60px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+            filter: blur(30px);
+            transform: translateX(-100px) skewX(-15deg);
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            width: 30px;
+            height: 100%;
+            left: 30px;
+            top: 0;
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100px) skewX(-15deg);
+        }
+        &:hover {
+            background: #338033;
+            cursor: pointer;
+            &:before {
+                transform: translateX(300px) skewX(-15deg);
+                opacity: 0.6;
+                transition: 0.7s;
+            }
+            &:after {
+                transform: translateX(300px) skewX(-15deg);
+                opacity: 1;
+                transition: 0.7s;
+            }
+        }
+    }
+}
+
+
+.modal-popup.custom-modal-box{
+    .modal-inner-wrap{
+        width:45%;
+        background: #000000;
+        color: @modalcolor;
+        border: 2px solid @modalcolor;
+        box-shadow: 2px 0px 21px 0px rgba(31,255,15,0.75);
+        -webkit-box-shadow: 2px 0px 21px 0px rgba(31,255,15,0.75);
+        -moz-box-shadow: 2px 0px 21px 0px rgba(31,255,15,0.75);
+    }
+    button.action-close{
+        color:@modalcolor;
+        &:before{
+            color:@modalcolor;
+        }
+        &:hover{
+            &:before{
+                color:#fff;
+            }
+        }
+    }
+    footer.modal-footer {
+        display: none;
+    }
+    .modal-title{
+        font-weight: 600;
+    }
+    .guess-number-box{
+        label{
+            margin: 10px 0;
+            display: block;
+            font-size: 16px;
+        }
+        input{
+            height: 50px;
+            border: 1px solid #000;
+            border-radius: 0;
+            font-size: 15px;
+            transition: border .6s ease-in-out;
+            outline: none;
+            border: 1px solid @modalcolor;
+            background: transparent;
+            color: @modalcolor;
+            &:focus{
+                border:1px solid @modalcolor;
+                box-shadow: none;
+            }
+        }
+        .gueess-btn{
+            overflow: hidden;
+            background: transparent;
+            box-shadow: none;
+            color: #fff;
+            letter-spacing: 1.8px;
+            font-size: 12px;
+            line-height: 2;
+            width: 50%;
+            text-transform: uppercase;
+            height: 50px;
+            margin: 20px 0;
+            border: 0;
+            border-radius: 0;
+            position: relative;
+            box-shadow: none;
+            border:1px solid @modalcolor;
+            color:@modalcolor;
+            &:before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 120%;
+                height: 200%;
+                left: 0;
+                z-index: 1;
+                opacity: 0;
+                transform: rotate(20deg);
+                transform-origin: right;
+                transition: opacity .45s cubic-bezier(.6,.05,.01,.99),transform .45s cubic-bezier(.6,.05,.01,.99);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                background-color: #0f1316;
+            }
+            &:hover{
+                &:before{
+                    transform: rotateY(0);
+                    bottom: 0;
+                    opacity: 1;
+                }
+            }
+            span{
+                z-index: 1;
+                position: relative;
+                display: block;
+            }
+        }
+        .result-box{
+            .result{
+                    font-size: 16px;
+                    margin:0;
+                    &.red{
+                        color: red;
+                    }
+                    &.green{
+                        color:@modalcolor;
+                    }
+            }
+            .win-num{
+                margin: 20px 0;
+                span{
+                    margin-right:12px;
+                    font-size: 14px;
+                    color:red;
+                    padding:12px;
+                    &:last-child{
+                        color:@modalcolor;
+                        font-size: 600;
+                        font-size: 16px;
+                        border:2px solid @modalcolor;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media only screen and (max-width:768px){
+    .play-game{
+        display: none;
+    }
+}
+.page-footer{
+    padding-bottom: 0 !important;
+}

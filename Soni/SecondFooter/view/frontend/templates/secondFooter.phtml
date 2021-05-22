@@ -1,0 +1,23 @@
+<div class="second-footer-content">
+        <h4>Second Footer</h4>
+    <button id="button" class="play-game">
+        <span><?= $block->escapeHtml(__('Play the Game 🎮')) ?></span>
+    </button>
+</div>
+
+<div id="modal" class="cusomt-guess-modal">
+    <div class="modal-body-content">
+        <div class="guess-number-box">
+            <label for="guess-number">Enter the number: between(1-100) </label>
+            <input type="number" id="guess-number" placeholder="Number from (1-50)"/>
+            <button id="submitNumber" class="gueess-btn">
+                <span>Guess</span>
+            </button>
+            <div class="result-box">
+                <p class="result"></p>
+                <div class="win-num" id="win-num"></div>
+                <button class="restart-game" style="display:none">Play again</button>
+            </div>
+        </div>
+    </div>
+</div>
