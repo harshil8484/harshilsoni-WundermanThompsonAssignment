@@ -3,6 +3,8 @@ Second Footer with Guessing number game in model
 
 
 Steps to install
+
+
 1.Please add this folder in app/code/ in this
 
 run this three commands
