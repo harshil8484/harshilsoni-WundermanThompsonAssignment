@@ -1,7 +1,9 @@
 # harshilsoni-WundermanThompsonAssignment
 Second Footer with Guessing number game in model
-Steps
-Please add this folder in app/code
+
+
+Steps to install
+Please add this folder in app/code/
 run commands
 php bin/magento setup:upgrade
 php bin/magento setup:static-content:deploy 
